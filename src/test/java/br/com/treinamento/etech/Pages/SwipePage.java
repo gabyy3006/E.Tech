@@ -6,15 +6,15 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
-public class AbasPage {
+public class SwipePage {
 
-    public AbasPage(AppiumDriver<MobileElement> driver){
+    public SwipePage (AppiumDriver<MobileElement> driver){
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
 
-    @AndroidFindBy (xpath = "//android.widget.TextView[@text='ABA 2']")
-    private MobileElement aba2;
-    public MobileElement getAba2() { return aba2;}
+    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id='android:id/content']")
+    private MobileElement swipe;
+    public MobileElement getSwipe() { return swipe;}
 
 
 }
